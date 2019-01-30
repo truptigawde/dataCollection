@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGray"
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PlantwiseBgGreen"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnBackArrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@color/Transparent"
+            android:onClick="Click"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/PlantwiseBgGreen"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="Plantwise"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DataCollectionBgGreen"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/tvSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="User settings"
+            android:textColor="@color/Black"
+            android:textSize="26sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:foreground="@color/White" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_column="0"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="Form definition version"
+                android:textColor="@color/Black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/txt_Settings_FormName"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_column="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="-2dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="India (DoA)- Plant Doctors - PWM - 4"
+                android:textSize="16sp"
+                android:textColor="@color/Black"
+                android:fontFamily="sans-serif-thin"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txt_Settings_Username"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_column="0"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="&quot;Susheel Gupta&quot;"
+                android:textColor="@color/Black"
+                android:textSize="21sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@color/White">
+
+                <Button
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/ButtonOrange"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Log Out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/Black"
+                    android:textSize="21sp"
+                    android:onClick="Click"/>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

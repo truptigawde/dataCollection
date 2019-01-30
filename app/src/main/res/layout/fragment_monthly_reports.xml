@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGray"
+    tools:context=".fragments.MonthlyReportsFragment">
+
+    <ListView
+        android:id="@+id/monthListMonthlyReports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/White"
+        android:divider="@color/BackgroundGray"
+        android:dividerHeight="2dp"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:id="@+id/svExpandedViewMonthlyReports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/monthExpandedViewMonthlyReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMonthlyReportsDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="My data: May 2018"
+                android:textColor="@color/Black"
+                android:textSize="23sp" />
+
+            <TableLayout
+                android:id="@+id/tableMydata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMonthlyReportsDate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Sessions"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Queries"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Men"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="4"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Women"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="This month"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthSessions"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthQueries"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthMen"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthWomen"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="All time"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeSessions"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="4"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeQueries"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeMen"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeWomen"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="3"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tableMydata"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="Queries per clinic"
+                android:textColor="@color/Black"
+                android:textSize="23sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Min"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Max"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Average"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="This month"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthMin"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthMax"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThisMonthAverage"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/TableColumnRowHeaderGray"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="All time"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeMin"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="4"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeMax"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllTimeAverage"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/secMonthlyTopCropsPests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Top crops and pests"
+                    android:textColor="@color/Black"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/SectionHeaderBgGray"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="My top 5"
+                    android:textColor="@color/Black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/tableMyTopCropsPests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:stretchColumns="*" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

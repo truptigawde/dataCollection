@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Transparent"
+    android:orientation="vertical"
+    tools:context=".fragments.CountyFragment">
+
+    <TextView
+        android:id="@+id/baseTitleLocation1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Select or enter county"
+        android:textColor="@color/Black"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/etLocation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@layout/my_edit_text_border"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/Black"
+        android:hint="Start typing county"
+        android:paddingBottom="6dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="6dp"
+        android:textColorHint="@color/EditTextHintGray"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlLocation1NextUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/ButtonOrange">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/Black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_next_arrow_black"
+            android:tint="@color/Black" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvRecentLocation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/White"
+        android:choiceMode="singleChoice"
+        android:divider="@color/BackgroundGray"
+        android:dividerHeight="5dp"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lvAllLocation1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/White"
+        android:choiceMode="singleChoice"
+        android:divider="@color/BackgroundGray"
+        android:dividerHeight="5dp" />
+
+</LinearLayout>

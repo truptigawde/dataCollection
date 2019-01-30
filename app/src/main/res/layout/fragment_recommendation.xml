@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.RecommendationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/baseLayoutRecommendations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/relLayCopyPrevRecommendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/ButtonOrange"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgCopyPrevious"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/copy_previous"
+                        android:tint="@color/Black" />
+
+                    <TextView
+                        android:id="@+id/btnTextCopyPreviousRecommendation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/imgCopyPrevious"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Copy from previous"
+                        android:textColor="@color/Black"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/baseTitleRecommendationToManageCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Recommendation to manage the current problem"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etRecommendationManageNow"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@layout/my_edit_text_border"
+                android:gravity="left|top"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/baseTitleRecommendationToPreventFuture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Recommendation to prevent this problem in future"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etRecommendationFuturePrevent"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@layout/my_edit_text_border"
+                android:gravity="left|top"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/btnAddAlternateLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/ButtonGreen"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/imgAddRemoveAltLanguage"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_add_black"
+                        android:tint="@color/White" />
+
+                    <TextView
+                        android:id="@+id/btnTextAddAlternateLang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@id/imgAddRemoveAltLanguage"
+                        android:gravity="center"
+                        android:text="Add alternative language"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sectionAlternateLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="-20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/baseTitleRecommendationToManageCurrentAltLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Recommendation to manage the current problem"
+                    android:textColor="@color/Black"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/etRecommendationManageNowAltLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@layout/my_edit_text_border"
+                    android:gravity="left|top"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/baseTitleRecommendationToPreventFutureAltLang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Recommendation to prevent this problem in future"
+                    android:textColor="@color/Black"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/etRecommendationFuturePreventAltLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@layout/my_edit_text_border"
+                    android:gravity="left|top"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Space-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="4" />-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/ButtonOrange">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/btnTextNextRecommendations"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="7dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:gravity="center_vertical|center_horizontal"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:text="Planned Activities"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="24sp" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginRight="1dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:src="@drawable/ic_next_arrow_black"-->
+            <!--android:tint="@color/Black" />-->
+            <!--</RelativeLayout>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

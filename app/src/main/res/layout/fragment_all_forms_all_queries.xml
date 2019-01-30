@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGray"
+    tools:context=".fragments.AllFormsAllQueriesFragment">
+<LinearLayout
+    android:id="@+id/baseLayoutAllForms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White">
+
+        <EditText
+            android:id="@+id/etAllFormsAllQueries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@layout/my_edit_text_border"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="3dp"
+            android:drawableTint="@color/Black"
+            android:hint="Search by clinic, farmer, crop or recommendation"
+            android:paddingBottom="6dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="6dp"
+            android:textColorHint="@color/EditTextHintGray"
+            android:textSize="22sp" />
+    </FrameLayout>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="8 August 2018 - Session end time 14:55"-->
+        <!--android:textColor="@color/Black"-->
+        <!--android:textSize="22sp" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Clinic KEDRPP"-->
+        <!--android:textColor="@color/Black"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp">-->
+
+        <!--<TableRow-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/White">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:fontFamily="sans-serif-thin"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="Gall Harrison\nCHILLLIES"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:drawableTint="@color/Black"-->
+                <!--android:drawableTop="@drawable/ic_edit_black"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="@string/Edit"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/ButtonGreen"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:drawableTint="@color/Black"-->
+                <!--android:drawableTop="@drawable/ic_delete_black"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="@string/Delete"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Red"-->
+                <!--android:textSize="16sp" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/White">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:fontFamily="sans-serif-thin"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="Patricia Mwange\nBANANAS"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+
+            <!--<TextView-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:drawableTint="@color/Black"-->
+                <!--android:drawableTop="@drawable/ic_check_black"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="@string/Sent"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Black"-->
+                <!--android:textSize="16sp" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/White">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:fontFamily="sans-serif-thin"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="Peter Oranje\nCASHEWS"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Black"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:drawableTint="@color/Black"-->
+                <!--android:drawableTop="@drawable/ic_edit_black"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="@string/Edit"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/ButtonGreen"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:drawableTint="@color/Black"-->
+                <!--android:drawableTop="@drawable/ic_delete_black"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="@string/Delete"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/Red"-->
+                <!--android:textSize="16sp" />-->
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+</LinearLayout>
+</ScrollView>

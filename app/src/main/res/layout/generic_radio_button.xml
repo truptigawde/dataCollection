@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dcaRadioButton"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:text="No"
+    android:textSize="18sp"/>

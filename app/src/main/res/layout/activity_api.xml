@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ApiActivity"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:id="@+id/baseApiLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API ACTIVITY"/>
+
+    <Button
+        android:id="@+id/btnVerifyUserByEmailApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Verify User By Email API"
+        android:onClick="Click"/>
+
+    <Button
+        android:id="@+id/btnProjectApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Projects API"
+        android:onClick="Click"/>
+
+    <Button
+        android:id="@+id/btnFormsDefsApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Forms Defs API"
+        android:onClick="Click"/>
+
+    <Button
+        android:id="@+id/btnReportsApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Reports API"
+        android:onClick="Click"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnUTCDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show UTC date time"
+            android:onClick="Click"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txtUTCDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_margin="6dp"
+        android:id="@+id/txtResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API response will come here"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" />
+
+        <RelativeLayout
+            android:id="@+id/relLayoutButtonNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/ButtonOrange"
+            android:layout_weight="3"
+            android:foregroundGravity="right">
+
+            <TextView
+                android:id="@+id/tvButtonNextUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingRight="15dp"
+                android:text="Recommendation - Type"
+                android:textColor="@color/Black"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ic_next_arrow_black"
+                android:tint="@color/Black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

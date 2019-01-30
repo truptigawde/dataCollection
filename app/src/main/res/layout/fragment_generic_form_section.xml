@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Transparent"
+        android:orientation="vertical"
+        tools:context=".fragments.GenericFormSectionFragment">
+
+    <TextView
+        android:id="@+id/baseTitleDiagnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Generic Text"
+        android:textColor="@color/Black"
+        android:textSize="21sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@layout/my_edit_text_border"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/Black"
+        android:hint="Generic Hint"
+        android:paddingBottom="6dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="6dp"
+        android:textColorHint="@color/EditTextHintGray"
+        android:textSize="22sp" />
+</LinearLayout>

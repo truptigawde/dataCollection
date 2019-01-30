@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Transparent"
+    android:orientation="vertical"
+    tools:context=".fragments.AboutTheFarmerFragment">
+
+    <ScrollView
+        android:id="@+id/rootlayAboutFarmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/baseLayoutAboutTheFarmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/baseTitleFarmerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Farmer name"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etFarmerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@layout/my_edit_text_border"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/baseTitleFarmerPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Phone number"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etFarmerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@layout/my_edit_text_border"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/baseTitleFarmerSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Farmer sex"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/rbgrpFarmerSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/rlFindAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/ButtonOrange">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/Black" />
+
+                <TextView
+                    android:id="@+id/btnTextFindAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/ivSearch"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="18dp"
+                    android:text="Find address"
+                    android:textColor="@color/Black"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/baseTitleFarmerLocation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="County"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etFarmerLocation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@layout/my_edit_text_border"
+                android:paddingBottom="6dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="6dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/baseTitleFarmerLocation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Sub-county"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etFarmerLocation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@layout/my_edit_text_border"
+                android:paddingBottom="6dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="6dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/baseTitleFarmerLocation3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Village"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/etFarmerLocation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@layout/my_edit_text_border"
+                android:paddingBottom="6dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="6dp"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

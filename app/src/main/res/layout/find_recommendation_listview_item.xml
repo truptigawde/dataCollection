@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:text="Current Control:"
+        android:textAllCaps="false"
+        android:textColor="@color/Black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/prevRecommendationCurrentControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:text="Line 1"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:foreground="@color/BackgroundGray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:text="Recommendation to prevent this problem in the future:"
+        android:textAllCaps="false"
+        android:textColor="@color/Black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/prevRecommendationFuturePrevention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:text="Line 1"
+        android:textColor="@color/Black"
+        android:textSize="18sp" />
+</LinearLayout>

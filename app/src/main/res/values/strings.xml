@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Plantwise Data Collection</string>
+    <string name="project_title">Plantwise</string>
+    <string name="project_name">Data Collection</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Delete"><u>Delete</u></string>
+    <string name="Edit"><u>Edit</u></string>
+    <string name="Sent"><u>Sent</u></string>
+    <string name="m2">m<sup><small>2</small></sup></string>
+</resources>

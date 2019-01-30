@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PartsAffectedFragment">
+
+    <LinearLayout
+        android:id="@+id/baseLayoutPartsAffected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Transparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/baseTitlePartsAffected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Plant part affected"
+            android:textColor="@color/Black"
+            android:textSize="21sp" />
+
+        <TableLayout
+            android:id="@+id/tblPartsAffected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="120dp" />
+
+        <ListView
+            android:id="@+id/lvPlantPartAffected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="220dp"
+            android:background="@color/White"
+            android:choiceMode="singleChoice"
+            android:divider="@color/BackgroundGray"
+            android:dividerHeight="10dp"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+</ScrollView>

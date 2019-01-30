@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Transparent"
+    android:orientation="vertical"
+    tools:context=".fragments.SampleBroughtFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/baseLayoutSampleBrought"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/baseTitleSampleBrought"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Sample brought"
+                android:textColor="@color/Black"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/rbgrpSampleBrought"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/rbSampleBroughtNo"-->
+                <!--style="@style/dcaRadioButton"-->
+                <!--android:layout_width="340dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/White"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="No"-->
+                <!--android:textSize="18sp" />-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/rbSampleBroughtYes"-->
+                <!--style="@style/dcaRadioButton"-->
+                <!--android:layout_width="340dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@color/White"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:text="Yes"-->
+                <!--android:textSize="18sp" />-->
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/ButtonGreen"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTakePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Take photo"
+                    android:textColor="@color/White"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/tvTakePhoto"
+                    android:src="@drawable/ic_camera_black"
+                    android:tint="@color/White" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgSampleBrought"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Space-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1" />-->
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/btnNextSampleBrought"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/ButtonOrange">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/btnTextNextSampleBrought"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="7dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:gravity="center_vertical|center_horizontal"-->
+            <!--android:paddingRight="25dp"-->
+            <!--android:text="Development stage"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="24sp" />-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginRight="1dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:src="@drawable/ic_next_arrow_black"-->
+            <!--android:tint="@color/Black" />-->
+            <!--</RelativeLayout>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

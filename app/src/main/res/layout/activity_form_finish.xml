@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".activities.FormFinishActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PlantwiseBgGreen"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/project_title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DataCollectionBgGreen"
+        android:divider="@color/White"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/FormEnd_Txt_TodayDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="12dp"
+            android:text="20 December 2018"
+            android:textColor="@color/Black"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="20dp"
+        android:foreground="@color/White" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/FormEnd_Btn_SameFarmerNewProblem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/ButtonOrange"
+                android:onClick="Click"
+                android:paddingBottom="10dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="10dp"
+                android:text="Same farmer, new problem"
+                android:textAllCaps="false"
+                android:textSize="27sp" />
+
+            <Button
+                android:id="@+id/FormEnd_Btn_NewForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/ButtonOrange"
+                android:onClick="Click"
+                android:paddingBottom="10dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="10dp"
+                android:text="New Form"
+                android:textAllCaps="false"
+                android:textSize="27sp" />
+
+            <Button
+                android:id="@+id/FormEnd_Btn_FinishSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/ButtonOrange"
+                android:onClick="Click"
+                android:paddingBottom="10dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="10dp"
+                android:text="Finish session"
+                android:textAllCaps="false"
+                android:textSize="27sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

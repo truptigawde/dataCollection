@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGray"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PlantwiseBgGreen"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/project_title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DataCollectionBgGreen"
+        android:divider="@color/White"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="12dp"
+            android:text="@string/project_name"
+            android:textColor="@color/Black"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="20dp"
+        android:foreground="@color/White" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnNewForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/ButtonOrange"
+                android:onClick="Click"
+                android:paddingBottom="10dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="10dp"
+                android:text="New form"
+                android:textAllCaps="false"
+                android:textSize="27sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:foreground="@color/White" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/Transparent"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:id="@+id/tvDrafts"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Draft"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvDraftsCount"
+                        android:layout_width="100dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp"
+                        android:text="0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <FrameLayout
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="7dp">
+
+                        <Button
+                            android:id="@+id/btnEditDrafts"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/ButtonOrange"
+                            android:gravity="center"
+                            android:onClick="Click"
+                            android:paddingLeft="80dp"
+                            android:paddingRight="80dp"
+                            android:text="Edit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/Black"
+                            android:textSize="24sp" />
+                    </FrameLayout>
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:id="@+id/tvNotSent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Not sent"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvNotSentCount"
+                        android:layout_width="100dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp"
+                        android:text="0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <FrameLayout
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="7dp">
+
+                        <Button
+                            android:id="@+id/btnNotSent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/ButtonOrange"
+                            android:gravity="center"
+                            android:onClick="Click"
+                            android:paddingLeft="80dp"
+                            android:paddingRight="80dp"
+                            android:text="Send"
+                            android:textAllCaps="false"
+                            android:textColor="@color/Black"
+                            android:textSize="24sp" />
+
+                        <!--<org.cabi.pdc.common.GifImageView-->
+                            <!--android:id="@+id/gifSending"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:visibility="invisible"/>-->
+                    </FrameLayout>
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:id="@+id/tvSent"
+
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Sent"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvSentCount"
+                        android:layout_width="100dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp"
+                        android:text="0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <FrameLayout
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="7dp">
+
+                        <Button
+                            android:id="@+id/btnSent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/ButtonGray"
+                            android:gravity="center"
+                            android:onClick="Click"
+                            android:paddingLeft="80dp"
+                            android:paddingRight="80dp"
+                            android:text="View"
+                            android:textAllCaps="false"
+                            android:textColor="@color/White"
+                            android:textSize="24sp" />
+                    </FrameLayout>
+                </TableRow>
+
+                <TableRow android:layout_width="0dp">
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="Total"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalCount"
+                        android:layout_width="100dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="18dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp"
+                        android:text="0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/Black"
+                        android:textSize="24sp" />
+
+                    <FrameLayout
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/White"
+                        android:paddingBottom="7dp">
+
+                        <Button
+                            android:id="@+id/btnTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/ButtonGray"
+                            android:gravity="center"
+                            android:onClick="Click"
+                            android:paddingLeft="80dp"
+                            android:paddingRight="80dp"
+                            android:text="View"
+                            android:textAllCaps="false"
+                            android:textColor="@color/White"
+                            android:textSize="24sp" />
+                    </FrameLayout>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/btnMyReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/ButtonGray"
+                android:onClick="Click"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivStatistics"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvHomeMyReports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ivStatistics"
+                    android:foregroundGravity="center_horizontal"
+                    android:text="My reports"
+                    android:textColor="@color/White"
+                    android:textSize="27sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:foreground="@color/White" />
+
+            <RelativeLayout
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Transparent"
+                android:onClick="Click">
+
+                <ImageView
+                    android:id="@+id/ivSettings"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_settings"
+                    android:tint="@color/Black" />
+
+                <TextView
+                    android:id="@+id/txt_Home_Settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/ivSettings"
+                    android:gravity="center"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="18dp"
+                    android:text="Settings"
+                    android:textColor="@color/Black"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnApiActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnApiActivityClick"
+                android:text="Go to API Activity"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <org.cabi.pdc.common.GifImageView
+        android:id="@+id/gifImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</LinearLayout>
