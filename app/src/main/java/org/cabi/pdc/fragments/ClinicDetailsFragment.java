@@ -55,6 +55,9 @@ public class ClinicDetailsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        dcaApplication = (DCAApplication) getActivity().getApplication();
+
         View rootView = inflater.inflate(R.layout.fragment_clinic_details, container, false);
 
         Bundle bundle = getArguments();

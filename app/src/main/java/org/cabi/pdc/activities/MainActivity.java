@@ -1,5 +1,6 @@
 package org.cabi.pdc.activities;
 
+import android.app.ProgressDialog;
 import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private boolean isSignedIn = false;
     DCAApplication dcaApplication;
+    public ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -563,6 +565,8 @@ public class MainActivity extends AppCompatActivity {
 //            return;
 //        }
 
+        showProgressDialog();
+
         try {
             final String userEmail;
 
@@ -579,7 +583,10 @@ public class MainActivity extends AppCompatActivity {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
+                            hideProgressDialog();
+                            Log.d("response",response);
                             if (response.contains("User")) {
+                                Toast.makeText(dcaApplication, response, Toast.LENGTH_SHORT).show();
                                 return;
                             } else {
                                 if (response.contains("\"")) {
@@ -607,6 +614,7 @@ public class MainActivity extends AppCompatActivity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
+                            hideProgressDialog();
                             Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
                             findViewById(R.id.defaultProgress).setVisibility(View.INVISIBLE);
                         }
@@ -622,11 +630,10 @@ public class MainActivity extends AppCompatActivity {
     private void googleSignIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         try {
-            Log.d("startActivityForResult","startActivityForResult");
+            Log.d("startActivityForResult", "startActivityForResult");
             startActivityForResult(signInIntent, RC_SIGN_IN);
-        }
-        catch (Exception e){
-            Log.d("error","error");
+        } catch (Exception e) {
+            Log.d("error", "error");
             e.printStackTrace();
         }
     }
@@ -646,7 +653,7 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(this, "DEVELOPER_ERROR This application is misconfigured", Toast.LENGTH_SHORT).show();
             updateUI(account); //account
         } catch (ApiException e) {
-            Log.d("error","error");
+            Log.d("error", "error");
             e.printStackTrace();
             Log.w("TAG_GOOGLE_SIGN_IN", "GOOGLE SIGN IN EXCEPTION:: " + e.getMessage());
             Toast.makeText(this, "Google Sign In Failed. Try Again", Toast.LENGTH_SHORT).show();
@@ -683,6 +690,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
+    }
+
+
+    public void showProgressDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setMessage("Loading ...");
+            mProgressDialog.setIndeterminate(true);
+        }
+
+        mProgressDialog.show();
+    }
+
+
+    public void hideProgressDialog() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
     }
 
 }

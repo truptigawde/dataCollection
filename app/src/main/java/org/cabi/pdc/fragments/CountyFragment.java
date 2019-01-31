@@ -47,11 +47,14 @@ public class CountyFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        this.mContext = getActivity();
+
         final View rootView = inflater.inflate(R.layout.fragment_find_county, container, false);
 
         final int fragmentId = this.getId();

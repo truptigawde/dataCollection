@@ -47,11 +47,13 @@ public class SubCountyFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        this.mContext = getActivity();
+
         final View rootView = inflater.inflate(R.layout.fragment_find_subcounty, container, false);
 
         baseTitleLocation2 = rootView.findViewById(R.id.baseTitleLocation2);

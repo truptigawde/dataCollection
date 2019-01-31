@@ -66,6 +66,7 @@ public class PlantDoctorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_plant_doctor, container, false);
 
+        dcaApplication = (DCAApplication) getActivity().getApplication();
         Bundle bundle = getArguments();
         if (bundle != null) {
             final int sectionPos = bundle.getInt("SectionPosition", -1);

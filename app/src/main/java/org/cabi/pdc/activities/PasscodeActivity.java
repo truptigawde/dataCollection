@@ -116,7 +116,7 @@ public class PasscodeActivity extends AppCompatActivity {
             makeRequest(urlReports, new VolleyCallback() {
                 @Override
                 public void onSuccess(JSONObject result) throws JSONException {
-
+                    printLog("urlReports",result.toString());
                     showPasscodeUI();
                     Gson gson = new Gson();
                     ApiData.getInstance().setMyMonthlyReport(gson.fromJson(result.getJSONObject("MyMonthlyReport").toString(), MyMonthlyReport.class));
@@ -144,6 +144,7 @@ public class PasscodeActivity extends AppCompatActivity {
         makeRequest(urlFormDefsUpdate, new VolleyCallback() {
             @Override
             public void onSuccess(JSONObject result) throws JSONException {
+                printLog("urlFormDefsUpdate",result.toString());
                 showPasscodeUI();
                 String formsLastUpdate = result.getString("FormsLastUpdate");
                 if (!TextUtils.isEmpty(formsLastUpdate)) {
@@ -164,6 +165,7 @@ public class PasscodeActivity extends AppCompatActivity {
             makeRequest(urlFormDefinitions, new VolleyCallback() {
                 @Override
                 public void onSuccess(JSONObject result) throws JSONException {
+                    printLog("urlFormDefinitions",result.toString());
                     Gson gson = new Gson();
                     ApiData.getInstance().setFormDefinition(gson.fromJson(result.getJSONArray("FormDefinitions").get(0).toString(), FormDefinition.class));
 
@@ -210,6 +212,7 @@ public class PasscodeActivity extends AppCompatActivity {
             makeRequest(urlMetadataComplete, new VolleyCallback() {
                 @Override
                 public void onSuccess(JSONObject result) throws JSONException {
+                    printLog("urlMetadataComplete",result.toString());
                     ApiData.getInstance().setMetaDataLastUpdate(result.getString("MetadataLastUpdate"));
 
                     JSONArray jArrMetadata = result.getJSONArray("MetaDatas");
@@ -271,6 +274,7 @@ public class PasscodeActivity extends AppCompatActivity {
             makeRequest(urlMetadataTranslation, new VolleyCallback() {
                 @Override
                 public void onSuccess(JSONObject result) throws JSONException {
+                    printLog("urlMetadataTranslation",result.toString());
                     JSONArray jArrTranslations = result.getJSONArray("Translations");
                     if (jArrTranslations != null && jArrTranslations.length() > 0) {
                         HashMap<String, MetadataTranslation> listMetadataTranslationset = new HashMap<>();
@@ -493,6 +497,7 @@ public class PasscodeActivity extends AppCompatActivity {
                     makePOSTRequest(urlSavePasscode, new VolleyCallback() {
                         @Override
                         public void onSuccess(JSONObject result) throws JSONException {
+                            printLog("makePOSTRequest",result.toString());
                             String s = result.toString();
                             Toast.makeText(PasscodeActivity.this, "POST_SAVE_PASSCODE: Successfully saved in DB", Toast.LENGTH_SHORT).show();
                         }
@@ -642,6 +647,16 @@ public class PasscodeActivity extends AppCompatActivity {
                 }
                 break;
             }
+        }
+    }
+
+    public static void printLog(String TAG, String message) {
+        int maxLogSize = 2500;
+        for(int i = 0; i <= message.length() / maxLogSize; i++) {
+            int start = i * maxLogSize;
+            int end = (i+1) * maxLogSize;
+            end = end > message.length() ? message.length() : end;
+            android.util.Log.d(TAG, message.substring(start, end));
         }
     }
 }

@@ -34,13 +34,14 @@ public class AboutTheFarmerFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
-        dcaApplication = (DCAApplication) getActivity().getApplication();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_about_the_farmer, container, false);
+
+        this.mContext = getActivity();
+        dcaApplication = (DCAApplication) getActivity().getApplication();
 
         Bundle bundle = getArguments();
         if (bundle != null) {

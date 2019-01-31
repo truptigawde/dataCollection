@@ -25,6 +25,7 @@ import org.cabi.pdc.RoomDb.DCAFormDatabase;
 import org.cabi.pdc.RoomDb.RoomDb_Form;
 import org.cabi.pdc.activities.FormActivity;
 import org.cabi.pdc.common.ApiData;
+import org.cabi.pdc.common.DCAApplication;
 import org.cabi.pdc.common.Utility;
 
 import java.util.List;
@@ -41,11 +42,12 @@ public class SentAllQueriesFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        this.mContext = getActivity();
+
         View rootView = inflater.inflate(R.layout.fragment_sent_all_queries, container, false);
 
         etSearchSentForms = rootView.findViewById(R.id.etSentSearchAllForms);

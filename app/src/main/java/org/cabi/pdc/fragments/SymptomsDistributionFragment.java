@@ -40,12 +40,15 @@ public class SymptomsDistributionFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
-        dcaApplication = (DCAApplication) getActivity().getApplication();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        this.mContext = getActivity();
+        dcaApplication = (DCAApplication) getActivity().getApplication();
+
         View rootView = inflater.inflate(R.layout.fragment_symptoms_distribution, container, false);
 
         mSymptomsDistribution = rootView.findViewById(R.id.lvSymptomsDistribution);

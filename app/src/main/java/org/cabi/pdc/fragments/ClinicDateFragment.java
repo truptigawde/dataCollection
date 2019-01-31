@@ -33,12 +33,14 @@ public class ClinicDateFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
-        dcaApplication = (DCAApplication) getActivity().getApplication();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        this.mContext = getActivity();
+        dcaApplication = (DCAApplication) getActivity().getApplication();
+
         View rootView = inflater.inflate(R.layout.fragment_clinic_date, container, false);
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {

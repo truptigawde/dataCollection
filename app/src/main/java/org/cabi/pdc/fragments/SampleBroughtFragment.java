@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
@@ -57,12 +58,13 @@ public class SampleBroughtFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
-        dcaApplication = (DCAApplication) getActivity().getApplication();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        this.mContext = getActivity();
+        dcaApplication = (DCAApplication) getActivity().getApplication();
+
         final View rootView = inflater.inflate(R.layout.fragment_sample_brought, container, false);
 
         btnTakePhoto = rootView.findViewById(R.id.btnTakePhoto);
@@ -155,7 +157,7 @@ public class SampleBroughtFragment extends Fragment {
                                                         startActivityForResult(chooser, GALLERY_REQUEST);
                                                         break;
                                                     case 1:
-                                                        if (mContext.checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && mContext.checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                                                             requestPermissions(new String[]{android.Manifest.permission.CAMERA}, MY_CAMERA_PERMISSION_CODE);
                                                         } else {
                                                             Intent myCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -273,7 +275,7 @@ public class SampleBroughtFragment extends Fragment {
     }
 
     private Bitmap getBitmapFromUri(Uri uri) throws IOException {
-        ParcelFileDescriptor parcelFileDescriptor = getContext().getContentResolver().openFileDescriptor(uri, "r");
+        ParcelFileDescriptor parcelFileDescriptor = getActivity().getContentResolver().openFileDescriptor(uri, "r");
         FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
         Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
         parcelFileDescriptor.close();

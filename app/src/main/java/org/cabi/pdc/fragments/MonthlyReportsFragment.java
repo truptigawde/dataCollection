@@ -44,7 +44,6 @@ public class MonthlyReportsFragment extends Fragment {
 
     @Override
     public void onAttach(Context context) {
-        mContext = context;
         super.onAttach(context);
     }
 
@@ -55,6 +54,9 @@ public class MonthlyReportsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        this.mContext = getActivity();
+
         View rootView = inflater.inflate(R.layout.fragment_monthly_reports, container, false);
 
         expandedMonthsLayout = rootView.findViewById(R.id.monthExpandedViewMonthlyReports);
