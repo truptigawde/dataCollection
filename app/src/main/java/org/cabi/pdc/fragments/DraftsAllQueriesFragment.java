@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -28,7 +29,6 @@ import org.cabi.pdc.RoomDb.RoomDB_Session;
 import org.cabi.pdc.RoomDb.RoomDb_Form;
 import org.cabi.pdc.activities.FormActivity;
 import org.cabi.pdc.common.ApiData;
-import org.cabi.pdc.common.DCAApplication;
 import org.cabi.pdc.common.Utility;
 
 import java.util.List;
@@ -170,7 +170,9 @@ public class DraftsAllQueriesFragment extends Fragment {
                         tvEdit.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
                         tvEdit.setTextColor(ContextCompat.getColor(mContext, R.color.ButtonGreen));
                         tvEdit.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_edit_black, 0, 0);
-                        tvEdit.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvEdit.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvEdit.setTag(formItem);
                         tvEdit.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -186,7 +188,9 @@ public class DraftsAllQueriesFragment extends Fragment {
                         tvDelete.setLayoutParams(tvDeleteLayParam);
                         tvDelete.setPadding(dp10, dp5, dp10, dp5);
                         tvDelete.setCompoundDrawablePadding(dp10);
-                        tvDelete.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvDelete.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvDelete.setText("Delete");
                         tvDelete.setAllCaps(false);
                         tvDelete.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);

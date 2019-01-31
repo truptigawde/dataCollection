@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -29,7 +30,6 @@ import org.cabi.pdc.RoomDb.DCAFormDatabase;
 import org.cabi.pdc.RoomDb.RoomDb_Form;
 import org.cabi.pdc.activities.FormActivity;
 import org.cabi.pdc.common.ApiData;
-import org.cabi.pdc.common.DCAApplication;
 import org.cabi.pdc.common.Utility;
 
 import java.util.List;
@@ -174,7 +174,9 @@ public class AllFormsAllQueriesFragment extends Fragment {
                         tvEdit.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
                         tvEdit.setTextColor(ContextCompat.getColor(mContext, R.color.ButtonGreen));
                         tvEdit.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_edit_black, 0, 0);
-                        tvEdit.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvEdit.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvEdit.setTag(formItem);
                         tvEdit.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -190,7 +192,9 @@ public class AllFormsAllQueriesFragment extends Fragment {
                         tvDelete.setLayoutParams(tvDeleteLayParam);
                         tvDelete.setPadding(dp10, dp5, dp10, dp5);
                         tvDelete.setCompoundDrawablePadding(dp10);
-                        tvDelete.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvDelete.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvDelete.setText("Delete");
                         tvDelete.setAllCaps(false);
                         tvDelete.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
@@ -211,7 +215,9 @@ public class AllFormsAllQueriesFragment extends Fragment {
                         tvNotSent.setLayoutParams(tvNotSentLayParam);
                         tvNotSent.setPadding(dp10, dp5, dp10, dp5);
                         tvNotSent.setCompoundDrawablePadding(dp10);
-                        tvNotSent.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvNotSent.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvNotSent.setText("Not Sent");
                         tvNotSent.setAllCaps(false);
                         tvNotSent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
@@ -232,7 +238,9 @@ public class AllFormsAllQueriesFragment extends Fragment {
                         tvSent.setLayoutParams(tvSentLayParam);
                         tvSent.setPadding(dp10, dp5, dp10, dp5);
                         tvSent.setCompoundDrawablePadding(dp10);
-                        tvSent.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            tvSent.setCompoundDrawableTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
                         tvSent.setText("Sent");
                         tvSent.setAllCaps(false);
                         tvSent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
